@@ -1,11 +1,19 @@
 <?php
 
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
+/**
+ * Class CreateQuestionsAnswersTable.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class CreateQuestionsAnswersTable extends Migration
 {
+    /**
+     *
+     */
     public function up()
     {
         Schema::create('questions_answers', function (Blueprint $table) {
@@ -19,6 +27,9 @@ class CreateQuestionsAnswersTable extends Migration
         });
     }
 
+    /**
+     *
+     */
     public function down()
     {
         Schema::dropIfExists('questions_answers');
