@@ -1,10 +1,10 @@
 <?php
 
-namespace BrianFaust\Questionable\Contracts;
+namespace BrianFaust\Questionable\Interfaces;
 
 use Illuminate\Database\Eloquent\Model;
 
-interface Questionable
+interface HasQuestions
 {
     public function questions();
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Questionable\Models;
+namespace BrianFaust\Questionable;
 
 use BrianFaust\Eloquent\Presenter\PresentableTrait;
 use BrianFaust\Questionable\Presenters\QuestionPresenter;

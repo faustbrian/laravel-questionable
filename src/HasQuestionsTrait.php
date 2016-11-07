@@ -2,10 +2,10 @@
 
 namespace BrianFaust\Questionable\Traits;
 
-use BrianFaust\Questionable\Models\Question;
+use BrianFaust\Questionable\Question;
 use Illuminate\Database\Eloquent\Model;
 
-trait Questionable
+trait HasQuestionsTrait
 {
     public function questions()
     {
