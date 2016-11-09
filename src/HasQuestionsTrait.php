@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Questionable\Traits;
+namespace BrianFaust\Questionable;
 
 use BrianFaust\Questionable\Question;
 use Illuminate\Database\Eloquent\Model;
