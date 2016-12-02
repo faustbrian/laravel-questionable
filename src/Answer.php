@@ -44,7 +44,7 @@ class Answer extends Model
     {
         $answer = new static();
         $answer->fill(array_merge($data, [
-            'author_id' => $author->id,
+            'author_id'   => $author->id,
             'author_type' => get_class($author),
         ]));
 
