@@ -11,9 +11,7 @@ $ composer require faustbrian/laravel-questionable
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    BrianFaust\Questionable\QuestionableServiceProvider::class
-];
+BrianFaust\Questionable\QuestionableServiceProvider::class
 ```
 
 To get started, you'll need to publish the vendor assets and migrate:
