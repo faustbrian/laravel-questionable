@@ -22,39 +22,39 @@ declare(strict_types=1);
 
 namespace BrianFaust\Questionable;
 
-use BrianFaust\Eloquent\Presenter\PresentableTrait;
-use BrianFaust\Questionable\Presenters\QuestionPresenter;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Answer extends Model
 {
-    use PresentableTrait;
-
     protected $table = 'questions_answers';
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function author()
+    public function author(): MorphTo
     {
         return $this->morphTo('author');
     }
 
-    public function question()
+    public function question(): BelongsTo
     {
         return $this->belongsTo(Question::class);
     }
 
-    public function markAsSolution()
+    public function markAsSolution(): bool
     {
         $this->question->markAsSolved($this->id);
 
         return $this->update(['is_solution' => true]);
     }
 
-    public function createAnswer(Question $question, $data, Model $author)
+    public function createAnswer(Question $question, $data, Model $author): self
     {
         $answer = new static();
-        $answer->fill(array_merge($data, [
+        $answer->forceFill(array_merge($data, [
             'author_id'   => $author->id,
             'author_type' => get_class($author),
         ]));
@@ -64,21 +64,13 @@ class Answer extends Model
         return $answer;
     }
 
-    public function updateAnswer($id, $data)
+    public function updateAnswer($id, $data): bool
     {
-        $answer = static::find($id);
-        $answer->update($data);
-
-        return $answer;
+        return (bool) static::find($id)->update($data);
     }
 
-    public function deleteAnswer($id)
+    public function deleteAnswer($id): bool
     {
-        return static::find($id)->delete();
-    }
-
-    public function getPresenterClass()
-    {
-        return QuestionPresenter::class;
+        return (bool) static::find($id)->delete();
     }
 }
