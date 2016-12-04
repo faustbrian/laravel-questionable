@@ -27,13 +27,12 @@ php artisan vendor:publish --provider="BrianFaust\Questionable\QuestionableServi
 
 namespace App;
 
-use BrianFaust\Questionable\HasQuestionsTrait;
-use BrianFaust\Questionable\Interfaces\HasQuestions;
+use BrianFaust\Questionable\HasQuestions;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model implements HasQuestions
+class Post extends Model
 {
-    use HasQuestionsTrait;
+    use HasQuestions;
 }
 ```
 

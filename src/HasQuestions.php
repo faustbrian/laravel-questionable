@@ -20,19 +20,29 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Questionable\Interfaces;
+namespace BrianFaust\Questionable;
 
 use Illuminate\Database\Eloquent\Model;
 
-interface HasQuestions
+trait HasQuestions
 {
-    public function questions();
+    public function questions()
+    {
+        return $this->morphMany(Question::class, 'questionable');
+    }
 
-    public function createQuestion($data, Model $author);
+    public function createQuestion($data, Model $author)
+    {
+        return (new Question())->createQuestion($this, $data, $author);
+    }
 
-    public function updateQuestion($id, $data);
+    public function updateQuestion($id, $data)
+    {
+        return (new Question())->updateQuestion($id, $data);
+    }
 
-    public function deleteQuestion($id);
-
-    public function markAsSolved($answerId);
+    public function deleteQuestion($id)
+    {
+        return (new Question())->deleteQuestion($id);
+    }
 }
