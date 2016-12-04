@@ -22,14 +22,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\Questionable;
 
-use BrianFaust\Eloquent\Presenter\PresentableTrait;
-use BrianFaust\Questionable\Presenters\QuestionPresenter;
 use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
-    use PresentableTrait;
-
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function questionable()
@@ -99,10 +95,5 @@ class Question extends Model
             'is_answered'    => true,
             'best_answer_id' => $answerId,
         ]);
-    }
-
-    public function getPresenterClass()
-    {
-        return QuestionPresenter::class;
     }
 }
