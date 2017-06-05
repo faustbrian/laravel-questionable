@@ -10,12 +10,6 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 $ composer require faustbrian/laravel-questionable
 ```
 
-And then include the service provider within `app/config/app.php`.
-
-``` php
-BrianFaust\Questionable\QuestionableServiceProvider::class
-```
-
 To get started, you'll need to publish the vendor assets and migrate:
 ```
 php artisan vendor:publish --provider="BrianFaust\Questionable\QuestionableServiceProvider" && php artisan migrate
@@ -92,19 +86,11 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Testing
 
 ``` bash
 $ phpunit
 ```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 

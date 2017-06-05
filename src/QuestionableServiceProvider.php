@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Questionable.
  *
@@ -14,17 +11,14 @@ declare(strict_types=1);
 
 namespace BrianFaust\Questionable;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 class QuestionableServiceProvider extends ServiceProvider
 {
-    public function boot(): void
+    public function boot()
     {
-        $this->publishMigrations();
-    }
-
-    public function getPackageName(): string
-    {
-        return 'questionable';
+        $this->publishes([
+            __DIR__.'/../database/migrations' => database_path('migrations'),
+        ], 'migrations');
     }
 }

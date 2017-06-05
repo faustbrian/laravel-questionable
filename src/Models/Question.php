@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Questionable.
  *
@@ -12,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Questionable;
+namespace BrianFaust\Questionable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -47,7 +44,7 @@ class Question extends Model
     {
         $question = new static();
         $question->forceFill(array_merge($data, [
-            'author_id'   => $author->id,
+            'author_id' => $author->id,
             'author_type' => get_class($author),
         ]));
 
@@ -84,7 +81,7 @@ class Question extends Model
     public function markAsSolved($answerId): bol
     {
         return (bool) $this->update([
-            'is_answered'    => true,
+            'is_answered' => true,
             'best_answer_id' => $answerId,
         ]);
     }
