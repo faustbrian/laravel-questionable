@@ -44,7 +44,7 @@ class Question extends Model
     {
         $question = new static();
         $question->forceFill(array_merge($data, [
-            'author_id' => $author->id,
+            'author_id'   => $author->id,
             'author_type' => get_class($author),
         ]));
 
@@ -81,7 +81,7 @@ class Question extends Model
     public function markAsSolved($answerId): bol
     {
         return (bool) $this->update([
-            'is_answered' => true,
+            'is_answered'    => true,
             'best_answer_id' => $answerId,
         ]);
     }

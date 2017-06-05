@@ -42,7 +42,7 @@ class Answer extends Model
     {
         $answer = new static();
         $answer->forceFill(array_merge($data, [
-            'author_id' => $author->id,
+            'author_id'   => $author->id,
             'author_type' => get_class($author),
         ]));
 
