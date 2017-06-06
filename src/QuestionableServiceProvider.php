@@ -15,6 +15,9 @@ use Illuminate\Support\ServiceProvider;
 
 class QuestionableServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap any application services.
+     */
     public function boot()
     {
         $this->publishes([
