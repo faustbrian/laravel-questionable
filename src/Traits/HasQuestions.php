@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Questionable\Traits;
 
-use BrianFaust\Questionable\Models\Question;
 use Illuminate\Database\Eloquent\Model;
+use BrianFaust\Questionable\Models\Question;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasQuestions
