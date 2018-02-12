@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Questionable\Traits;
 
-use Illuminate\Database\Eloquent\Model;
 use BrianFaust\Questionable\Models\Question;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasQuestions
