@@ -1,21 +1,21 @@
 # Laravel Questionable
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Questionable/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Questionable)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-questionable.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Questionable.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Questionable/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Questionable.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Questionable)
+[![Build Status](https://img.shields.io/travis/artisanry/Questionable/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Questionable)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/questionable.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/Questionable.svg?style=flat-square)](https://github.com/artisanry/Questionable/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/Questionable.svg?style=flat-square)](https://packagist.org/packages/artisanry/Questionable)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-questionable
+$ composer require artisanry/questionable
 ```
 
 To get started, you'll need to publish the vendor assets and migrate:
 ```
-php artisan vendor:publish --provider="BrianFaust\Questionable\QuestionableServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="Artisanry\Questionable\QuestionableServiceProvider" && php artisan migrate
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ php artisan vendor:publish --provider="BrianFaust\Questionable\QuestionableServi
 
 namespace App;
 
-use BrianFaust\Questionable\HasQuestions;
+use Artisanry\Questionable\HasQuestions;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -97,7 +97,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -106,4 +106,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

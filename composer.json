@@ -1,17 +1,17 @@
 {
-    "name": "faustbrian/laravel-questionable",
+    "name": "artisanry/questionable",
     "description": "Questionable Polymorphic Eloquent Models for Laravel 5",
-    "keywords": ["laravel", "framework", "Laravel-questionable", "Laravel Questionable", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-questionable", "Laravel Questionable"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
         "illuminate/support": "^5.6",
-        "faustbrian/eloquent-presenter": "^1.0"
+        "artisanry/eloquent-presenter": "^1.0"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.0",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Questionable\\": "src/"
+            "Artisanry\\Questionable\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Questionable\\": "tests"
+            "Artisanry\\Tests\\Questionable\\": "tests"
         }
     },
     "config": {
@@ -38,7 +38,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Questionable\\QuestionableServiceProvider"
+                "Artisanry\\Questionable\\QuestionableServiceProvider"
             ]
         }
     },

@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Questionable.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -27,7 +27,7 @@ return [
         |--------------------------------------------------------------------------
         */
 
-        'question' => \BrianFaust\Questionable\Question::class,
+        'question' => \Artisanry\Questionable\Question::class,
 
         /*
         |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ return [
         |--------------------------------------------------------------------------
         */
 
-        'answer' => \BrianFaust\Questionable\Answer::class,
+        'answer' => \Artisanry\Questionable\Answer::class,
 
     ],
 
