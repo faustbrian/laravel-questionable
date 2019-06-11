@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.2",
         "illuminate/support": "^5.8",
-        "artisanry/eloquent-presenter": "^1.0"
+        "artisanry/eloquent-presenter": "^4.1"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.0",
